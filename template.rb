@@ -9,6 +9,7 @@ gem 'remove_turbolinks', group: :development
 
 # remove turbolinks
 #generate(:remove_turbolinks:remove)
+run "rails g remove_turbolinks:remove"
 
 # gem_group :development, :test do
 #   gem "rspec-rails"
