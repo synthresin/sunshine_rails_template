@@ -8,7 +8,7 @@ gem 'pry', group: :development
 gem 'remove_turbolinks', group: :development
 
 # remove turbolinks
-generate(:remove_turbolinks:remove)
+#generate(:remove_turbolinks:remove)
 
 # gem_group :development, :test do
 #   gem "rspec-rails"
