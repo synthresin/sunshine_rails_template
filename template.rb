@@ -5,10 +5,19 @@ gem 'will_paginate'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'pry', group: :development
-gem "remove_turbolinks", git: "git://github.com/synthresin/remove_turbolinks", branch: "add_support_for_single_quote", group: :development
+
+# inject_into_file 'name_of_file.rb', after: "#The code goes below this line. Don't forget the Line break at the end\n" do <<-'RUBY'
+#   puts "Hello World"
+# RUBY
+# end
+
+gsub_file "Gemfile", /# Turbolinks makes following links in your web application faster. Read more: https:\/\/github.com\/rails\/turbolinks[\r\n]/, ""
+gsub_file "Gemfile", /gem 'turbolinks'[\r\n]/, ""
+gsub_file "app/views/layouts/application.html.erb", /, ['\"]data-turbolinks-track['\"] => true/, ""
+gsub_file "app/assets/javascripts/application.js", /\/\/= require turbolinks[\r\n]/, ""
+ 
 # remove turbolinks
 #generate(:remove_turbolinks:remove)
-run "bundle exec rails g remove_turbolinks:remove"
 
 # gem_group :development, :test do
 #   gem "rspec-rails"
