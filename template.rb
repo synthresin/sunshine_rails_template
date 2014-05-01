@@ -1,11 +1,14 @@
 gem 'jquery-ui-rails'
 gem 'devise'
-gem 'figaro'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'will_paginate'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'pry', group: :development
+gem 'remove_turbolinks', group: :development
+
+# remove turbolinks
+generate(:remove_turbolinks:remove)
 
 # gem_group :development, :test do
 #   gem "rspec-rails"
