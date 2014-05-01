@@ -5,8 +5,7 @@ gem 'will_paginate'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'pry', group: :development
-gem 'remove_turbolinks', group: :development
-
+gem "remove_turbolinks", git: "git://github.com/synthresin/remove_turbolinks", branch: "add_support_for_single_quote", group: :development
 # remove turbolinks
 #generate(:remove_turbolinks:remove)
 run "bundle exec rails g remove_turbolinks:remove"
